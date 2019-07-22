@@ -1,0 +1,12 @@
+http://wildanafif.id/articles/Tutorial-Cara-Install-Django-di-Windows
+
+
+Entering ve (virtual environment)
+workon nama_ve
+
+CRUD is Create Read Update Delete
+
+QUESTIONS
+- not find any project from the start
+- auth if its loaded from web
+- html css?

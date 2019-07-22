@@ -1,0 +1,24 @@
+- Signup
+http POST http://127.0.0.1:8000/rest-auth/registration/ username="erlaaang" password1="pqpqpqpq" password2="pqpqpqpq"
+
+- Signin
+http http://127.0.0.1:8000/rest-auth/login/ username="erlaaang" password="pqpqpqpq"
+
+- Token (erlaaang pqpqpqpq)
+"Authorization: Token e65a1de30abfe043b8377c71f7c616131e3b0ffd"
+
+- Access API using credential
+http http://127.0.0.1:8000/api/v1/movies "Authorization: Token e65a1de30abfe043b8377c71f7c616131e3b0ffd"
+
+- Create (new movie list)
+http POST http://127.0.0.1:8000/api/v1/movies/ "Authorization: Token e65a1de30abfe043b8377c71f7c616131e3b0ffd" title="Magang di Rekalogi" genre="College Life" year=2019
+- Read
+http GET http://127.0.0.1:8000/api/v1/movies/1
+http http://127.0.0.1:8000/api/v1/movies/2
+http http://127.0.0.1:8000/api/v1/movies/3
+- Update (must be the creator of the movie)
+http PUT http://127.0.0.1:8000/api/v1/movies/5 "Authorization: Token e65a1de30abfe043b8377c71f7c616131e3b0ffd" title="Character Building Season" genre="Action" year=2016
+- Delete (must be the creator of the movie)
+http DELETE http://127.0.0.1:8000/api/v1/movies/3 "Authorization: Token <YOUR_TOKEN>"
+
+
